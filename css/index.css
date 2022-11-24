@@ -31,6 +31,11 @@ html {
   /* 点位分布 */
   /* 地图 */
   /* 全国用户总量统计 */
+  /* 右边 */
+  /* 订单 */
+  /* 销售额统计 */
+  /*  渠道分布  一季度销售进度 */
+  /* 完成进度统计 */
 }
 .main .column .survey {
   height: 1.5rem;
@@ -305,6 +310,72 @@ html {
   width: 0.05rem;
   height: 0.13rem;
   border-radius: 0.0625rem;
+}
+.main .column .order {
+  height: 0.9rem;
+}
+.main .column .order .filter {
+  display: flex;
+}
+.main .column .order .filter .active {
+  color: white;
+}
+.main .column .order .filter a {
+  font-size: 0.29rem;
+  display: block;
+  color: #1950c4;
+  padding: 0 0.25rem;
+  border-right: 0.0375rem solid #00f2f1;
+}
+.main .column .order .filter a:nth-of-type(4) {
+  border: none;
+}
+.main .column .order .data {
+  display: flex;
+}
+.main .column .order .data .item {
+  width: 50%;
+}
+.main .column .order .data .item h4 {
+  font-size: 0.275rem;
+}
+.main .column .sales {
+  height: 2.4rem;
+}
+.main .column .sales h3 {
+  font-size: 0.275rem;
+  color: white;
+  font-weight: 400;
+}
+.main .column .all {
+  display: flex;
+}
+.main .column .all .canal {
+  flex: 5;
+  height: 2.3rem;
+  margin-right: 0.25rem;
+}
+.main .column .all .canal h3 {
+  font-size: 0.275rem;
+  color: white;
+  font-weight: 400;
+}
+.main .column .all .quarter {
+  flex: 4;
+  height: 2.3rem;
+}
+.main .column .all .quarter h3 {
+  font-size: 0.275rem;
+  color: white;
+  font-weight: 400;
+}
+.main .column .complete {
+  height: 1.9rem;
+}
+.main .column .complete h3 {
+  font-size: 0.275rem;
+  color: white;
+  font-weight: 400;
 }
 .main .column:nth-of-type(2) {
   margin: 0.375rem 0.1875rem 0;
