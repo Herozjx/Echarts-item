@@ -23,3 +23,63 @@ for (let i = 0; i < choseTab.length; i++) {
     }
   });
 }
+
+// 饼图
+(function () {
+  var myChart = echarts.init(document.getElementsByClassName("pie")[0]);
+  var option = {
+    color: [
+      "#2d6af6",
+      "#80caa5",
+      "#de8e87",
+      "#f2a385",
+      "#3f95fc",
+      "#ade4bc",
+      "#64c2e6",
+      "#4b9cf8",
+      "#2f6cfa",
+    ],
+    textStyle: {
+      fontSize: 12,
+      textBorderColor: "blue",
+      textBorderType: "solid",
+      textBorderWidth: 2,
+    },
+    tooltip: {
+      trigger: "item",
+      formatter: "{a} <br/>{b} : {c} ({d}%)",
+    },
+    series: [
+      {
+        name: "点位分布统计",
+        type: "pie",
+        radius: ["10%", "65%"],
+        center: ["50%", "50%"],
+        roseType: "radius",
+        itemStyle: {
+          borderRadius: 5,
+        },
+        data: [
+          { value: 22, name: "云南" },
+          { value: 26, name: "北京" },
+          { value: 24, name: "山东" },
+          { value: 25, name: "河北" },
+          { value: 20, name: "江苏" },
+          { value: 25, name: "浙江" },
+          { value: 30, name: "四川" },
+          { value: 42, name: "河南" },
+        ],
+      },
+    ],
+  };
+  myChart.setOption(option);
+
+  window.addEventListener("load", function () {
+    myChart.resize();
+  });
+  window.addEventListener("resize", function () {
+    myChart.resize();
+  });
+})();
+
+// 地图

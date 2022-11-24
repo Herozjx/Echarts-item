@@ -4,7 +4,7 @@ function setRem() {
   cli_W = cli_W < 1024 ? 1024 : cli_W;
   var html = document.getElementsByTagName("html")[0];
   var rem = cli_W / 24;
-  html.style.fontsize = rem + "px";
+  html.style.fontSize = rem + "px";
 }
 window.onload = setRem;
 window.onresize = setRem;
