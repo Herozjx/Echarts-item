@@ -53,8 +53,8 @@ for (let i = 0; i < choseTab.length; i++) {
       {
         name: "点位分布统计",
         type: "pie",
-        radius: ["10%", "65%"],
-        center: ["50%", "50%"],
+        radius: ["15%", "70%"],
+        center: ["50%", "55%", "50%", "50%"],
         roseType: "radius",
         itemStyle: {
           borderRadius: 5,
@@ -390,6 +390,139 @@ for (let i = 0; i < choseTab.length; i++) {
       },
     },
     series: series,
+  };
+  myChart.setOption(option);
+  window.addEventListener("load", function () {
+    myChart.resize();
+  });
+  window.addEventListener("resize", function () {
+    myChart.resize();
+  });
+})();
+
+// 全国用户总量统计图
+(function () {
+  var item = {
+    name: "",
+    value: 1200,
+    itemStyle: {
+      color: "#254065",
+    },
+    tooltip: {
+      extraCssText: "opacity:0",
+    },
+  };
+  var myChart = echarts.init(document.getElementsByClassName("pie1")[0]);
+  var option = {
+    tooltip: {
+      trigger: "item",
+      axisPointer: {
+        type: "shadow",
+      },
+      // extraCssText: "opacity:0",
+    },
+    grid: {
+      left: "3%",
+      right: "4%",
+      bottom: "3%",
+      top: "5%",
+      containLabel: true,
+      show: true,
+      borderWidth: 1,
+      borderColor: "#0ea0c1",
+    },
+    xAxis: [
+      {
+        type: "category",
+        data: [
+          "郑州",
+          "",
+          "北京",
+          "",
+          "合肥",
+          "",
+          "......",
+          "",
+          "杭州",
+          "",
+          "济南",
+          "",
+          "重庆",
+        ],
+
+        axisTick: {
+          alignWithLabel: true,
+          show: false,
+        },
+        axisLabel: {
+          color: "#a5edff",
+          fontSize: 12,
+        },
+        axisLine: {
+          lineStyle: {
+            color: "#0ea0c1",
+          },
+        },
+      },
+    ],
+    yAxis: [
+      {
+        type: "value",
+        axisLabel: {
+          color: "#a5edff",
+          fontSize: 12,
+        },
+        splitLine: {
+          lineStyle: {
+            color: "#0ea0c1",
+          },
+        },
+      },
+    ],
+
+    series: [
+      {
+        name: "Direct",
+        type: "bar",
+        barWidth: "60%",
+        itemStyle: {
+          color: {
+            type: "linear",
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [
+              {
+                offset: 0,
+                color: "#74f8fa", // 0% 处的颜色
+              },
+              {
+                offset: 1,
+                color: "#2c68c8", // 100% 处的颜色
+              },
+            ],
+            global: false, // 缺省为 false
+          },
+        },
+
+        data: [
+          2100,
+          1900,
+          1700,
+          1560,
+          1400,
+          item,
+          item,
+          item,
+          900,
+          750,
+          600,
+          480,
+          240,
+        ],
+      },
+    ],
   };
   myChart.setOption(option);
   window.addEventListener("load", function () {
