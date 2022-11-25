@@ -532,3 +532,58 @@ for (let i = 0; i < choseTab.length; i++) {
     myChart.resize();
   });
 })();
+
+// 订单模块
+// 获取天数tab栏
+var filterData = document.getElementsByClassName("filter")[0].children;
+// 获取天数数据
+var orderData = document.getElementsByClassName("orderData");
+// 循环遍历
+var timer = null; //定时器
+var index_ = 0;
+for (let i = 0; i < filterData.length; i++) {
+  // 给他们两个添加一个类名
+  filterData[i].setAttribute("index", i);
+  //   当点击每一个时
+  filterData[i].addEventListener("click", function () {
+    // 获取设置的类名
+    index_ = this.getAttribute("index");
+    for (let j = 0; j < filterData.length; j++) {
+      filterData[j].classList.remove("active");
+      filterData[index_].classList.add("active");
+    }
+    for (let k = 0; k < orderData.length; k++) {
+      orderData[k].classList.add("orderDataHidden");
+      orderData[index_].classList.remove("orderDataHidden");
+    }
+  });
+}
+// 封装成一个函数  方便下方使用
+function timerData() {
+  timer = setInterval(function () {
+    // index_++
+    index_++;
+    // 当index_数值大于等于filterData.length时也就是 >=4时
+    if (index_ >= filterData.length) {
+      // 让index_重新等于0 重新开始
+      index_ = 0;
+    }
+    // 这时候模拟点击事件  自动点击
+    filterData[index_].click();
+  }, 1500);
+}
+// 调用函数
+timerData();
+
+// 获取整个订单框
+var order = document.getElementsByClassName("order")[0];
+// 当鼠标放到整个框上时
+order.onmouseenter = function () {
+  // 清除定时器  不让动
+  clearInterval(timer);
+};
+// 当鼠标移走时
+order.onmouseleave = function () {
+  // 重新调用上面封装好的函数自动模拟点击
+  timerData();
+};

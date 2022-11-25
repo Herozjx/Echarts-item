@@ -346,10 +346,35 @@ html {
         display: flex;
         .item {
           width: 50%;
+          margin-top: 0.0875rem;
+          margin-left: 0.2125rem;
+          &:nth-of-type(1) .line {
+            background-color: #ed3f35;
+          }
+          &:nth-of-type(2) .line {
+            background-color: #eacf19;
+          }
           h4 {
-            font-size: 0.275rem;
+            font-size: 0.3375rem;
+            margin-bottom: 0.075rem;
+            color: white;
+            font-weight: normal;
+          }
+          span {
+            display: block;
+            font-size: 0.225rem;
+            color: #4c9bfd;
+            .line {
+              display: inline-block;
+              width: 0.05rem;
+              height: 0.13rem;
+              border-radius: 0.0625rem;
+            }
           }
         }
+      }
+      .orderDataHidden {
+        display: none !important;
       }
     }
     /* 销售额统计 */

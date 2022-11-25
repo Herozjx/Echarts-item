@@ -335,9 +335,34 @@ html {
 }
 .main .column .order .data .item {
   width: 50%;
+  margin-top: 0.0875rem;
+  margin-left: 0.2125rem;
+}
+.main .column .order .data .item:nth-of-type(1) .line {
+  background-color: #ed3f35;
+}
+.main .column .order .data .item:nth-of-type(2) .line {
+  background-color: #eacf19;
 }
 .main .column .order .data .item h4 {
-  font-size: 0.275rem;
+  font-size: 0.3375rem;
+  margin-bottom: 0.075rem;
+  color: white;
+  font-weight: normal;
+}
+.main .column .order .data .item span {
+  display: block;
+  font-size: 0.225rem;
+  color: #4c9bfd;
+}
+.main .column .order .data .item span .line {
+  display: inline-block;
+  width: 0.05rem;
+  height: 0.13rem;
+  border-radius: 0.0625rem;
+}
+.main .column .order .orderDataHidden {
+  display: none !important;
 }
 .main .column .sales {
   height: 2.4rem;
