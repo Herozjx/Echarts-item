@@ -376,10 +376,10 @@
           <div class="inner">
             <!-- 天数晒选数据 -->
             <div class="filter">
-              <a href="#" class="active">365天</a>
-              <a href="#">90天</a>
-              <a href="#">30天</a>
-              <a href="#">24小时</a>
+              <a href="##" class="active">365天</a>
+              <a href="##">90天</a>
+              <a href="##">30天</a>
+              <a href="##">24小时</a>
             </div>
             <!-- 数据 -->
             <!-- 365天 -->
@@ -455,7 +455,15 @@
         <!-- 销售额统计 -->
         <div class="sales slicing">
           <div class="inner">
-            <h3>销售额统计</h3>
+            <div class="sale">
+              <h3>销售额统计</h3>
+              <a href="##" data-time="year" class="stat active">年</a>
+              <a href="##" data-time="quarter" class="stat">季</a>
+              <a href="##" data-time="month" class="stat">月</a>
+              <a href="##" data-time="week" class="stat">周</a>
+            </div>
+            <!-- 统计图 -->
+            <div class="chartLine"></div>
           </div>
         </div>
         <!-- 渠道分布  一季度销售进度 -->
@@ -492,3 +500,5 @@
 <script src="./js/china.js"></script>
 <!-- 引入index.js文件 -->
 <script src="./js/index.js"></script>
+<!-- 引入sales.js文件 -->
+<script src="./js/Sales.js"></script>

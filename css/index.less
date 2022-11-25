@@ -380,10 +380,33 @@ html {
     /* 销售额统计 */
     .sales {
       height: 2.4rem;
-      h3 {
-        font-size: 0.275rem;
-        color: white;
-        font-weight: 400;
+      .sale {
+        display: flex;
+        h3 {
+          font-size: 0.275rem;
+          color: white;
+          font-weight: 400;
+          height: 0.4rem;
+          padding-right: 0.125rem;
+          margin-right: 0.375rem;
+          border-right: 0.0375rem solid #00f2f1;
+        }
+        a {
+          // display: inline-block;
+          font-size: 0.2375rem;
+          padding: 0.0625rem;
+          color: #0bace6;
+          margin: 0 0 0 0.25rem;
+          border-radius: 0.0625rem;
+        }
+        .active {
+          color: white;
+          background-color: #4c9bfd;
+        }
+      }
+      .chartLine {
+        width: 100%;
+        height: 90%;
       }
     }
     /*  渠道分布  一季度销售进度 */
