@@ -37,12 +37,18 @@
       splitArea: {
         show: false,
       },
+      axisLine: {
+        lineStyle: {
+          color: "#ffffff",
+        },
+      },
     },
     tooltip: {
       show: true,
       position: ["60%", "0%"],
       backgroundColor: "rgba(255, 255, 255, 0.3)",
     },
+
     series: [
       {
         name: "Beijing",
@@ -65,6 +71,7 @@
         lineStyle: {
           normal: {
             color: "#ffffff",
+            width: 3,
           },
         },
       },

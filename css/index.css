@@ -420,6 +420,47 @@ html {
   color: white;
   font-weight: 400;
 }
+.main .column .all .quarter .datum {
+  height: 2.2rem;
+}
+.main .column .all .quarter .datum .per {
+  height: 1.3rem;
+  font-size: 0.5rem;
+  color: white;
+  line-height: 1.4rem;
+  text-align: center;
+}
+.main .column .all .quarter .datum .per span {
+  font-size: 0.25rem;
+}
+.main .column .all .quarter .datum .data {
+  display: flex;
+  justify-content: space-between;
+}
+.main .column .all .quarter .datum .data .item:nth-of-type(1) .line {
+  background-color: #6acca3;
+}
+.main .column .all .quarter .datum .data .item:nth-of-type(2) .line {
+  background-color: #ed3f35;
+}
+.main .column .all .quarter .datum .data .item h4 {
+  font-size: 0.3375rem;
+  margin-bottom: 0.075rem;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
+.main .column .all .quarter .datum .data .item span {
+  display: block;
+  font-size: 0.225rem;
+  color: #4cfde2;
+}
+.main .column .all .quarter .datum .data .item span .line {
+  display: inline-block;
+  width: 0.05rem;
+  height: 0.13rem;
+  border-radius: 0.0625rem;
+}
 .main .column .complete {
   height: 1.9rem;
 }
