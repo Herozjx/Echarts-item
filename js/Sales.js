@@ -2,24 +2,24 @@
 (function () {
   var myChart = echarts.init(document.getElementsByClassName("chartLine")[0]);
   //准备的销售数据
-  var data = {
-    year: [
+  var data = [
+    [
       [24, 40, 101, 134, 90, 230, 210, 230, 120, 230, 210, 120],
       [40, 64, 191, 324, 290, 330, 310, 213, 180, 200, 180, 79],
     ],
-    quarter: [
+    [
       [23, 75, 12, 97, 21, 67, 98, 21, 43, 64, 76, 38],
       [43, 31, 65, 23, 78, 21, 82, 64, 43, 60, 19, 34],
     ],
-    month: [
+    [
       [34, 87, 32, 76, 98, 12, 32, 87, 39, 36, 29, 36],
       [56, 43, 98, 21, 56, 87, 43, 12, 43, 54, 12, 98],
     ],
-    week: [
+    [
       [43, 73, 62, 54, 91, 54, 84, 43, 86, 43, 54, 53],
       [32, 54, 34, 87, 32, 45, 62, 68, 93, 54, 54, 24],
     ],
-  };
+  ];
   var option = {
     title: {
       text: "单位:万",
@@ -125,10 +125,11 @@
         stat[index_].classList.add("active");
       }
       // 获取自定义类名data-time
-      var dataTime = this.getAttribute("data-time");
+      // var dataTime = this.getAttribute("data-time");
+
       // 一步一步找到series下面的数据 让数据等于设置数据下的
-      option.series[0].data = data[dataTime][0];
-      option.series[1].data = data[dataTime][1];
+      option.series[0].data = data[i][0];
+      option.series[1].data = data[i][1];
 
       // 这时得重新调用
       myChart.setOption(option);

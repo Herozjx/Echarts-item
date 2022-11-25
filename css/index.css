@@ -407,6 +407,10 @@ html {
   color: white;
   font-weight: 400;
 }
+.main .column .all .canal .radarData {
+  height: 2.2rem;
+  width: 100%;
+}
 .main .column .all .quarter {
   flex: 4;
   height: 2.3rem;

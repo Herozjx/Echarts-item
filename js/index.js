@@ -570,7 +570,7 @@ function timerData() {
     }
     // 这时候模拟点击事件  自动点击
     filterData[index_].click();
-  }, 1500);
+  }, 3000);
 }
 // 调用函数
 timerData();
