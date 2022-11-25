@@ -2,3 +2,520 @@
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body,
+html {
+  width: 100%;
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  font-size: 80px;
+}
+.main {
+  min-width: 1024px;
+  max-width: 1920px;
+  background: url(../images/logo.png) no-repeat;
+  background-size: contain;
+  min-height: 800px;
+  padding: 1.5rem 0.25rem 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+}
+.main .column {
+  flex: 4;
+  /* 图片切图 */
+  /* 点位分布 */
+  /* 地图 */
+  /* 全国用户总量统计 */
+  /* 右边 */
+  /* 订单 */
+  /* 销售额统计 */
+  /*  渠道分布  一季度销售进度 */
+  /* 完成进度统计 */
+}
+.main .column .survey {
+  height: 1.5rem;
+  box-sizing: border-box;
+}
+.main .column .survey ul {
+  display: flex;
+  justify-content: space-between;
+}
+.main .column .survey ul li {
+  display: flex;
+  flex-direction: column;
+}
+.main .column .survey ul li h4 {
+  font-size: 0.4375rem;
+  color: white;
+  font-weight: normal;
+  margin: 0.03rem 0;
+}
+.main .column .survey ul li:nth-of-type(1) .line {
+  background-color: #2d6af6;
+}
+.main .column .survey ul li:nth-of-type(2) .line {
+  background-color: #83caa6;
+}
+.main .column .survey ul li:nth-of-type(3) .line {
+  background-color: #83caa6;
+}
+.main .column .survey ul li:nth-of-type(4) .line {
+  background-color: #db4e3f;
+}
+.main .column .survey ul li span {
+  font-size: 0.2rem;
+  color: #4c9bfd;
+}
+.main .column .survey ul li span .line {
+  display: inline-block;
+  width: 0.05rem;
+  height: 0.13rem;
+  border-radius: 0.0625rem;
+}
+.main .column .slicing {
+  border: 1px solid transparent;
+  border-image-source: url(../images/border.png);
+  border-width: 0.625rem 0.475rem 0.25rem 1.65rem;
+  border-image-slice: 50 38 20 132;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+.main .column .inner {
+  position: absolute;
+  padding: 0.3125rem 0.3125rem;
+  left: -1.625rem;
+  right: -0.35rem;
+  bottom: -0.125rem;
+  top: -0.65rem;
+}
+.main .column .control {
+  height: 5rem;
+}
+.main .column .control .showTab {
+  display: none;
+}
+.main .column .control .tabs {
+  font-size: 0.3rem;
+  height: 0.8rem;
+  display: flex;
+  align-items: center;
+  margin-left: 0.1875rem;
+}
+.main .column .control .tabs .line {
+  width: 0.05rem;
+  height: 0.375rem;
+  display: inline-block;
+  margin: 0 0.25rem;
+  background-color: #6feeef;
+}
+.main .column .control .tabs .active {
+  color: white;
+}
+.main .column .control .tabs a {
+  color: #1950c4;
+  font-weight: normal;
+}
+.main .column .control .top {
+  width: 100%;
+  height: 0.5rem;
+  color: #68d8fe;
+  background-color: #1a3158;
+  line-height: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.main .column .control .top li {
+  font-size: 0.2rem;
+}
+.main .column .control .top li:nth-of-type(1) {
+  margin-left: 0.2rem;
+}
+.main .column .control .top li:nth-of-type(2) {
+  margin-left: -3rem;
+}
+.main .column .control .top li:nth-of-type(3) {
+  margin-right: 0.04rem;
+}
+.main .column .control .bottom {
+  width: 100%;
+  height: 3.75rem;
+  margin-top: 0.125rem;
+  overflow: hidden;
+}
+.main .column .control .bottom .list {
+  width: 100%;
+  height: 6.25rem;
+  list-style: none;
+  line-height: 0.4375rem;
+  animation: name 13s linear infinite;
+}
+.main .column .control .bottom .list:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.main .column .control .bottom .list li {
+  padding-left: 0.1875rem;
+  color: #7dadfc;
+  font-size: 0.1875rem;
+  display: flex;
+  height: 0.5rem;
+}
+.main .column .control .bottom .list li span:nth-of-type(1) {
+  width: 1.3rem;
+}
+.main .column .control .bottom .list li span:nth-of-type(2) {
+  width: 4.5rem;
+}
+.main .column .control .bottom .list li span:nth-of-type(3) {
+  width: 1rem;
+}
+.main .column .control .bottom .list li:hover {
+  background-color: #1a3258;
+}
+@keyframes name {
+  100% {
+    transform: translateY(-400px);
+  }
+}
+.main .column .point {
+  height: 3rem;
+}
+.main .column .point h3 {
+  font-size: 0.2875rem;
+  color: white;
+  font-weight: 400;
+}
+.main .column .point .chart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.125rem;
+}
+.main .column .point .chart .pie {
+  width: 4rem;
+  height: 2.3rem;
+}
+.main .column .point .chart .data {
+  width: 2.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.35rem 0.3rem;
+  box-sizing: border-box;
+  background: url(../images/rect.png) no-repeat;
+  background-size: contain;
+}
+.main .column .point .chart .data .item:nth-of-type(1) .line {
+  background-color: #ed3f35;
+}
+.main .column .point .chart .data .item:nth-of-type(2) .line {
+  background-color: #eacf19;
+}
+.main .column .point .chart .data .item h4 {
+  font-size: 0.3375rem;
+  color: white;
+  font-weight: normal;
+}
+.main .column .point .chart .data .item span {
+  display: block;
+  color: #f8ab05;
+  font-size: 0.1875rem;
+}
+.main .column .point .chart .data .item span .line {
+  display: inline-block;
+  width: 0.05rem;
+  height: 0.13rem;
+  border-radius: 0.0625rem;
+}
+.main .column .map {
+  height: 7.2rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.main .column .map h3 {
+  line-height: 0.2rem;
+  font-size: 0.25rem;
+  color: white;
+  padding: 0.2rem 0;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+.main .column .map h3 .block {
+  display: inline-block;
+  width: 0.32rem;
+  height: 0.32rem;
+  background: url(../images/shebei.png);
+  background-size: contain;
+  margin-right: 0.15rem;
+}
+.main .column .map .chart {
+  flex: 1;
+  background-color: rgba(225, 225, 225, 0.05);
+}
+.main .column .map .chart .geo {
+  width: 100%;
+  height: 100%;
+}
+.main .column .users {
+  height: 3.05rem;
+}
+.main .column .users h3 {
+  font-size: 0.2875rem;
+  color: white;
+  font-weight: 400;
+}
+.main .column .users .chart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3125rem;
+}
+.main .column .users .chart .pie1 {
+  width: 7rem;
+  height: 2.4rem;
+}
+.main .column .users .chart .data {
+  width: 2.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.4rem 0.3rem;
+  box-sizing: border-box;
+  background: url(../images/rect.png) no-repeat;
+  background-size: contain;
+}
+.main .column .users .chart .data .item:nth-of-type(1) .line {
+  background-color: #ed3f35;
+}
+.main .column .users .chart .data .item:nth-of-type(2) .line {
+  background-color: #eacf19;
+}
+.main .column .users .chart .data .item h4 {
+  font-size: 0.3125rem;
+  color: white;
+  font-weight: normal;
+}
+.main .column .users .chart .data .item span {
+  display: block;
+  color: #f8ab05;
+  font-size: 0.1875rem;
+}
+.main .column .users .chart .data .item span .line {
+  display: inline-block;
+  width: 0.05rem;
+  height: 0.13rem;
+  border-radius: 0.0625rem;
+}
+.main .column .order {
+  height: 0.9rem;
+}
+.main .column .order .filter {
+  display: flex;
+}
+.main .column .order .filter .active {
+  color: white;
+}
+.main .column .order .filter a {
+  font-size: 0.29rem;
+  display: block;
+  color: #1950c4;
+  padding: 0 0.25rem;
+  border-right: 0.0375rem solid #00f2f1;
+}
+.main .column .order .filter a:nth-of-type(4) {
+  border: none;
+}
+.main .column .order .data {
+  display: flex;
+}
+.main .column .order .data .item {
+  width: 50%;
+  margin-top: 0.0875rem;
+  margin-left: 0.2125rem;
+}
+.main .column .order .data .item:nth-of-type(1) .line {
+  background-color: #ed3f35;
+}
+.main .column .order .data .item:nth-of-type(2) .line {
+  background-color: #eacf19;
+}
+.main .column .order .data .item h4 {
+  font-size: 0.3375rem;
+  margin-bottom: 0.075rem;
+  color: white;
+  font-weight: normal;
+}
+.main .column .order .data .item span {
+  display: block;
+  font-size: 0.225rem;
+  color: #4c9bfd;
+}
+.main .column .order .data .item span .line {
+  display: inline-block;
+  width: 0.05rem;
+  height: 0.13rem;
+  border-radius: 0.0625rem;
+}
+.main .column .order .orderDataHidden {
+  display: none !important;
+}
+.main .column .sales {
+  height: 2.4rem;
+}
+.main .column .sales .sale {
+  display: flex;
+}
+.main .column .sales .sale h3 {
+  font-size: 0.275rem;
+  color: white;
+  font-weight: 400;
+  height: 0.4rem;
+  padding-right: 0.125rem;
+  margin-right: 0.375rem;
+  border-right: 0.0375rem solid #00f2f1;
+}
+.main .column .sales .sale a {
+  font-size: 0.2375rem;
+  padding: 0.0625rem;
+  color: #0bace6;
+  margin: 0 0 0 0.25rem;
+  border-radius: 0.0625rem;
+}
+.main .column .sales .sale .active {
+  color: white;
+  background-color: #4c9bfd;
+}
+.main .column .sales .chartLine {
+  width: 100%;
+  height: 90%;
+}
+.main .column .all {
+  display: flex;
+}
+.main .column .all .canal {
+  flex: 5;
+  height: 2.3rem;
+  margin-right: 0.25rem;
+}
+.main .column .all .canal h3 {
+  font-size: 0.275rem;
+  color: white;
+  font-weight: 400;
+}
+.main .column .all .canal .radarData {
+  height: 2.2rem;
+  width: 100%;
+}
+.main .column .all .quarter {
+  flex: 4;
+  height: 2.3rem;
+}
+.main .column .all .quarter h3 {
+  font-size: 0.275rem;
+  color: white;
+  font-weight: 400;
+}
+.main .column .all .quarter .datum {
+  height: 2.2rem;
+}
+.main .column .all .quarter .datum .per {
+  height: 1.3rem;
+  font-size: 0.5rem;
+  color: white;
+  line-height: 1.4rem;
+  text-align: center;
+}
+.main .column .all .quarter .datum .per span {
+  font-size: 0.25rem;
+}
+.main .column .all .quarter .datum .data {
+  display: flex;
+  justify-content: space-between;
+}
+.main .column .all .quarter .datum .data .item:nth-of-type(1) .line {
+  background-color: #6acca3;
+}
+.main .column .all .quarter .datum .data .item:nth-of-type(2) .line {
+  background-color: #ed3f35;
+}
+.main .column .all .quarter .datum .data .item h4 {
+  font-size: 0.3375rem;
+  margin-bottom: 0.075rem;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
+.main .column .all .quarter .datum .data .item span {
+  display: block;
+  font-size: 0.225rem;
+  color: #4cfde2;
+}
+.main .column .all .quarter .datum .data .item span .line {
+  display: inline-block;
+  width: 0.05rem;
+  height: 0.13rem;
+  border-radius: 0.0625rem;
+}
+.main .column .complete {
+  height: 1.9rem;
+}
+.main .column .complete h3 {
+  font-size: 0.275rem;
+  color: white;
+  font-weight: 400;
+}
+.main .column .complete .chart {
+  display: flex;
+  justify-content: space-between;
+  height: 1.9rem;
+  width: 100%;
+}
+.main .column .complete .chart .blob {
+  width: 4rem;
+  height: 1.9rem;
+}
+.main .column .complete .chart .data {
+  width: 2.1rem;
+  display: flex;
+  height: 1.9rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.25rem 0.25rem;
+  box-sizing: border-box;
+  background: url(../images/rect.png) no-repeat;
+  background-size: 100% 100%;
+}
+.main .column .complete .chart .data .item:nth-of-type(1) .line {
+  background-color: #ed3f35;
+}
+.main .column .complete .chart .data .item:nth-of-type(2) .line {
+  background-color: #eacf19;
+}
+.main .column .complete .chart .data .item h4 {
+  font-size: 0.3rem;
+  color: white;
+  font-weight: normal;
+  margin-left: 0.1875rem;
+}
+.main .column .complete .chart .data .item span {
+  display: block;
+  color: #f8ab05;
+  font-size: 0.1625rem;
+  margin-left: 0.125rem;
+}
+.main .column .complete .chart .data .item span .line {
+  display: inline-block;
+  width: 0.05rem;
+  height: 0.13rem;
+  border-radius: 0.0625rem;
+}
+.main .column:nth-of-type(2) {
+  margin: 0.375rem 0.1875rem 0;
+  flex: 5;
+}
